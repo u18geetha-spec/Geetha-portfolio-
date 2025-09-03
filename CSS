@@ -1,0 +1,114 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body with soft floral gradient */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #fff0f5, #fce1ff);
+    color: #4b004b;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Animated floating flowers */
+.flower {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('https://cdn-icons-png.flaticon.com/512/616/616408.png') no-repeat center/contain;
+    animation: float 10s infinite ease-in-out;
+    opacity: 0.7;
+}
+.flower1 { top: 10%; left: 5%; animation-delay: 0s; }
+.flower2 { top: 40%; left: 80%; animation-delay: 2s; }
+.flower3 { top: 70%; left: 20%; animation-delay: 4s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-30px) rotate(20deg); }
+}
+
+/* Header with big cursive name */
+header {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+.name {
+    font-family: 'Pacifico', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    color: #d1005d;
+    animation: fadeIn 2s ease-in-out;
+}
+.tagline {
+    font-size: 18px;
+    color: #6d006d;
+    margin-top: 10px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Section styles */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #a0005a;
+    animation: fadeIn 2s ease-in-out;
+}
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Project cards */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.project-card {
+    background: #fff0f9;
+    padding: 20px;
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(208, 0, 93, 0.3);
+    transition: transform 0.4s;
+    animation: fadeIn 4s ease-in-out;
+}
+.project-card:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+/* Contact links */
+.contact a {
+    color: #d1005d;
+    font-weight: bold;
+    text-decoration: none;
+}
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #d1005d;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
