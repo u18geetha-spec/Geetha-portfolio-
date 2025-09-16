@@ -1,0 +1,22 @@
+// Add interactive animations on scroll
+window.addEventListener("scroll", () => {
+    const elements = document.querySelectorAll("section, .project-card");
+    elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+            el.style.opacity = 1;
+            el.style.transform = "translateY(0)";
+            el.style.transition = "all 1s ease-in-out";
+        }
+    });
+});
+
+// Add floating flower animation speed change on hover
+document.querySelectorAll(".flower").forEach(flower => {
+    flower.addEventListener("mouseenter", () => {
+        flower.style.animationDuration = "4s";
+    });
+    flower.addEventListener("mouseleave", () => {
+        flower.style.animationDuration = "10s";
+    });
+});
